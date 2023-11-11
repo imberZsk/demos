@@ -1,13 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-import gsap from 'gsap-trial/dist/gsap'
-import { ScrollTrigger } from 'gsap-trial/dist/ScrollTrigger'
-import { ScrollSmoother } from 'gsap-trial/dist/ScrollSmoother'
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
