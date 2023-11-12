@@ -8,35 +8,38 @@ export default function Page() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ['end end', 'end start']
+    offset: ['start start', 'center start']
   })
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
   const position = useTransform(scrollYProgress, (pos) => {
-    console.log(pos)
-    pos >= 1 ? 'relative' : 'fixed'
+    if (pos === 0) return 'relative'
+    return pos >= 1 ? 'relative' : 'fixed'
+  })
+
+  // pin完之后transition到最后
+  const y = useTransform(scrollYProgress, (pos) => {
+    if (pos === 1) return '100vh'
   })
 
   return (
     <div>
-      <div className="h-screen bg-[#ccc]">
+      <div className="h-screen bg-[#ccc]"></div>
+      <motion.div
+        className="h-[200vh] pb-[100vh] bg-yellow-200 relative"
+        ref={targetRef}
+      >
         <motion.div
-          style={{ opacity }}
-          ref={targetRef}
-          className="relative mb-[8rem] h-screen py-16 text-white before:pointer-events-none before:fixed before:inset-0 before:z-0 before:bg-[radial-gradient(circle_farthest-side_at_var(--x,_100px)_var(--y,_100px),_var(--color-secondary)_0%,_transparent_100%)] before:opacity-40"
+          className="relative h-screen bg-black flex left-0 top-0 w-full"
+          style={{ position, y }}
         >
-          <motion.div
-            style={{ scale, x: '-50%', position }}
-            className="fixed left-1/2 z-10 flex flex-col items-center"
-          >
-            666
+          <motion.div className="m-auto inset-0" style={{ opacity }}>
+            pin效果
           </motion.div>
         </motion.div>
-      </div>
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
-      <div></div>
+      </motion.div>
+      <div className="h-screen bg-pink-200"></div>
+      <div className="h-screen bg-pink-200"></div>
     </div>
   )
 }
