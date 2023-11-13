@@ -8,7 +8,7 @@ export default function Page() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ['start start', 'center start']
+    offset: ['start start', 'end end']
   })
 
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
@@ -19,14 +19,14 @@ export default function Page() {
 
   // pin完之后transition到最后
   const y = useTransform(scrollYProgress, (pos) => {
-    if (pos === 1) return '100vh'
+    if (pos === 1) return '2800px'
   })
 
   return (
     <div>
       <div className="h-screen bg-[#ccc]"></div>
       <motion.div
-        className="h-[200vh] pb-[100vh] bg-yellow-200 relative"
+        className="h-[calc(100vh_+_2800px)] pb-[2800px] bg-yellow-200 relative"
         ref={targetRef}
       >
         <motion.div
