@@ -7,6 +7,12 @@ const nextConfig = {
         hostname: 'images.pexels.com',
         port: '',
         pathname: '/photos/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'ssm.res.meizu.com',
+        port: '',
+        pathname: '/admin/**'
       }
     ]
   }
