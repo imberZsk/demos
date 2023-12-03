@@ -9,6 +9,7 @@ const users = [
   },
 ];
 
+// 客户
 const customers = [
   {
     id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
@@ -72,6 +73,7 @@ const customers = [
   },
 ];
 
+// 发票
 const invoices = [
   {
     customer_id: customers[0].id,
