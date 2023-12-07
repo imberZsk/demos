@@ -6,14 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "studio": "prisma studio"
   },
   "dependencies": {
     "@prisma/client": "5.6.0",
     "next": "14.0.3",
     "prisma": "^5.6.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "slate": "^0.101.1",
+    "slate-react": "^0.101.3",
+    "swr": "^2.2.4"
   },
   "devDependencies": {
     "@types/node": "^20",
