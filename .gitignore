@@ -23,3 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 21
+next-fullstack/.env
