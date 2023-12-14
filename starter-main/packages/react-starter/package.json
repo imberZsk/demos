@@ -1,0 +1,51 @@
+{
+  "name": "react-starter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.29.7",
+    "antd": "^5.5.1",
+    "axios": "^1.4.0",
+    "colorthief": "^2.4.0",
+    "framer-motion": "^10.12.14",
+    "gsap": "^3.11.5",
+    "html2canvas": "^1.4.1",
+    "lottie-web": "^5.12.0",
+    "magic-grid": "^3.2.4",
+    "mobx": "^6.9.0",
+    "mobx-react-lite": "^3.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.11.2",
+    "swiper": "^9.3.2",
+    "three": "^0.153.0",
+    "three-gltf-loader": "^1.111.0",
+    "zustand": "^4.3.8"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@types/three": "^0.152.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "@vitejs/plugin-react-swc": "^3.3.1",
+    "autoprefixer": "^10.4.14",
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.41.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.23",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.8"
+  }
+}

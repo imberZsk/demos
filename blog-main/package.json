@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "start": "turbo run dev",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
+    "lint-staged": "npx lint-staged"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "postcss": "^8.4.28",
+    "prettier": "^3.0.2",
+    "tsconfig": "workspace:*",
+    "turbo": "latest",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2"
+  },
+  "engines": {
+    "node": ">=16.8.0"
+  },
+  "packageManager": "pnpm@8.6.10",
+  "name": "blog"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-n": "cd ./packages/next-starter && pnpm run dev",
+    "dev-r": "cd ./packages/next-starter && pnpm run dev",
+    "prepare": "husky install",
+    "lint-staged": "npx lint-staged"
+  },
+  "engines": {
+    "node": ">=16.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imberZsk/starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imberZsk/starter/issues"
+  },
+  "homepage": "https://github.com/imberZsk/starter#readme",
+  "dependencies": {
+    "prettier": "^3.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^3.0.1",
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  }
+}

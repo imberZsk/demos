@@ -6,3 +6,5 @@ export async function POST(req: Request) {
   const res = await prisma.user.create({ data: user })
   return Response.json(res)
 }
+
+// try catch

@@ -14,9 +14,9 @@ export default function Page() {
 
   const create = () => {
     const test_data = {
-      id: 1,
-      name: 'imber2',
-      email: 'imber1@example.com'
+      id: 6,
+      name: 'imber6',
+      email: 'imber6@example.com'
     }
     mutate(
       '/api/user/create',

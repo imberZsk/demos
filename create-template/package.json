@@ -1,0 +1,33 @@
+{
+  "name": "create-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "meizu-cli": "./bin/www.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imberZsk/create-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imberZsk/create-template/issues"
+  },
+  "homepage": "https://github.com/imberZsk/create-template#readme",
+  "devDependencies": {
+    "axios": "^1.4.0",
+    "commander": "^11.0.0"
+  },
+  "dependencies": {
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^7.0.0",
+    "ncp": "^2.0.0",
+    "ora": "^4.0.3"
+  }
+}

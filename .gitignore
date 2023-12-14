@@ -25,3 +25,6 @@ dist-ssr
 21
 next-fullstack/.env
 .env
+.next
+.next
+node_modules

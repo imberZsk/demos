@@ -1,0 +1,14 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-empty-function": "error",
+    "no-var": "error",
+    "no-debugger": "error",
+    "no-unused-vars": ["error"]
+    // 'no-unused-vars': [
+    //   'error',
+    //   { varsIgnorePattern: '.*', args: 'none' }
+    // ],
+  }
+}
