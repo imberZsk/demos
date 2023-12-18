@@ -1,12 +1,9 @@
 'use client';
 
-import { createPlugins, Plate } from '@udecode/plate-common';
+import { Plate } from '@udecode/plate-common';
 
+import { plugins } from '@/lib/plate/plate-plugins';
 import { Editor } from '@/components/plate-ui/editor';
-
-const plugins = createPlugins([], {
-  components: {},
-});
 
 const initialValue = [
   {
@@ -18,7 +15,13 @@ const initialValue = [
 
 export function PlateEditor() {
   return (
-    <Plate plugins={plugins} initialValue={initialValue}>
+    <Plate
+      plugins={plugins}
+      initialValue={initialValue}
+      onChange={(newValue) => {
+        console.log(newValue);
+      }}
+    >
       <Editor placeholder="Type your message here." />
     </Plate>
   );

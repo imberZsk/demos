@@ -1,6 +1,7 @@
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { TooltipProvider } from '@/components/plate-ui/tooltip';
+import { SiteHeader } from '@/components/site/site-header';
 import { TailwindIndicator } from '@/components/site/tailwind-indicator';
 import { ThemeProvider } from '@/components/site/theme-provider';
 
@@ -39,7 +40,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             'min-h-screen bg-background font-sans antialiased',
             '[&_.slate-selected]:!bg-primary/20 [&_.slate-selection-area]:border [&_.slate-selection-area]:border-primary [&_.slate-selection-area]:bg-primary/10'
           )}
-          suppressHydrationWarning
         >
           <ThemeProvider attribute="class" defaultTheme="light">
             <TooltipProvider
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               skipDelayDuration={0}
             >
               <div className="relative flex min-h-screen flex-col">
-                {/* <SiteHeader /> */}
+                <SiteHeader />
                 <div className="flex-1">{children}</div>
               </div>
               <TailwindIndicator />
