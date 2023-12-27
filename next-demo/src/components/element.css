@@ -19,7 +19,7 @@
   line-height: 1;
 }
 
-.ProseMirror {
+/* .ProseMirror {
   [data-type='horizontalRule'] {
     @apply my-8 py-4 transition-all duration-100 ease-in-out cursor-pointer;
 
@@ -41,4 +41,4 @@
       @apply dark:border-white/20 dark:bg-white/80;
     }
   }
-}
+} */

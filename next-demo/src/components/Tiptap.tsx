@@ -11,7 +11,13 @@ import './element.css'
 const Tiptap = () => {
   const editor = useEditor({
     extensions: [...defaultExtensions],
-    content: '<p>Hello World! 🌎️</p>'
+    content: '<p>Hello World! 🌎️</p>',
+    editorProps: {
+      attributes: {
+        class:
+          'prose dark:prose-invert prose-sm sm:prose-base lg:prose-lg xl:prose-2xl m-5 focus:outline-none'
+      }
+    }
   })
 
   if (!editor) return null
@@ -104,7 +110,7 @@ const Tiptap = () => {
 
         <div
           onClick={() => {
-            console.log(editor)
+            console.log(editor.getJSON())
           }}
         >
           test

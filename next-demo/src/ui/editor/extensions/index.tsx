@@ -9,6 +9,14 @@ export const defaultExtensions = [
       HTMLAttributes: {
         class: 'border-l-4 border-stone-700'
       }
+    },
+    bold: {
+      HTMLAttributes: {
+        class: 'font-bold'
+      }
+    },
+    heading: {
+      levels: [1, 2, 3]
     }
   }),
   TiptapUnderline,
