@@ -1,6 +1,0 @@
-{
-	"dependencies": {
-		"@tiptap/extension-underline": "^2.1.13",
-		"tiptap-markdown": "^0.8.8"
-	}
-}
