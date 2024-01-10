@@ -41,13 +41,26 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
-# 对比社区活跃度
+# 目标和需求
 
-| 名称    | Star | 特点 |
-| ------- | ---- | ---- |
-| Alice   | 25   | 北京 |
-| Bob     | 30   | 上海 |
-| Charlie | 28   | 广州 |
+Slidev is a slides maker and presenter designed for developers, consist of the following features
+
+- 🎨 **编辑器定位** - 是富文本编辑器、代码编辑器（manaco）、还是 MD 文档编辑器，研究各种编辑器技术的特点和优势，编辑器定位。
+- 🧑‍💻 **插件和扩展性** - 考虑编辑器的插件和扩展能力。一个好的编辑器应该能够支持自定义插件和扩展，以满足特定的需求。
+- 🤹 **文档和社区支持** - 评估技术的文档质量和社区支持。良好的文档和活跃的社区可以提供有关技术的帮助、解决问题和分享最佳实践。
+- 🎥 **性能和可靠性** - 考虑编辑器的性能和可靠性要求。对于大型项目或需要高度稳定性的场景，可能需要选择经过良好测试并具有高性能的编辑器技术。
+- 📤 **可视化和用户体验** - 用户体验项目至关重要，您需要考虑编辑器的可视化效果和用户界面。您可以评估编辑器的样式定制性、交互性和用户友好性。
+- 🛠 **趋势和前景** - 了解当前市场上的编辑器技术趋势和前景。考虑技术的发展方向、社区活跃程度以及商业支持等因素。
+
+<br>
+<br>
+
+Read more about [Why Slidev?](https://sli.dev/guide/why)
+
+<!--
+You can have `style` tag in markdown to override the style for the current page.
+Learn more: https://sli.dev/guide/syntax#embedded-styles
+-->
 
 <style>
 h1 {
@@ -63,7 +76,51 @@ h1 {
 
 ---
 
-# 对比学习成本
+# 编辑器定位
+
+| 名称    | Star | 特点 |
+| ------- | ---- | ---- |
+| Alice   | 25   | 北京 |
+| Bob     | 30   | 上海 |
+| Charlie | 28   | 广州 |
+
+<!-- # What is Slidev?
+
+Slidev is a slides maker and presenter designed for developers, consist of the following features
+
+- 📝 **Text-based** - focus on the content with Markdown, and then style them later
+- 🎨 **Themable** - theme can be shared and used with npm packages
+- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
+- 🤹 **Interactive** - embedding Vue components to enhance your expressions
+- 🎥 **Recording** - built-in recording and camera view
+- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
+- 🛠 **Hackable** - anything possible on a webpage
+
+<br>
+<br>
+
+Read more about [Why Slidev?](https://sli.dev/guide/why) -->
+
+<!--
+You can have `style` tag in markdown to override the style for the current page.
+Learn more: https://sli.dev/guide/syntax#embedded-styles
+-->
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# 插件和扩展性
 
 Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
@@ -88,7 +145,7 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 
 ---
 
-# Code
+# 文档和社区支持
 
 Use code snippets and get the highlighting directly![^1]
 
@@ -125,7 +182,7 @@ function updateUser(id: number, update: User) {
 
 ---
 
-# Components
+# 性能和可靠性
 
 <div grid="~ cols-2 gap-4">
 <div>
@@ -159,7 +216,7 @@ Check out [the guides](https://sli.dev/builtin/components.html) for more.
 
 ## class: px-20
 
-# Themes
+# 可视化和用户体验
 
 Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
 
@@ -190,7 +247,7 @@ check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 ## preload: false
 
-# Animations
+# 趋势和前景
 
 Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
 
@@ -256,11 +313,6 @@ const final = {
 [Learn More](https://sli.dev/guide/animations.html#motion)
 
 </div>
-
----
-
-layout: center
-class: text-center
 
 ---
 
