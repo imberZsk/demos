@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color: #ffffff;
+}
+
+.dark {
+  --color: #000000;
+}
+
+.main {
+  background: var(--color);
+}
+/* const toDark = function(){
+  const classList = document.documentElement.classList
+  classList.add('dark')
+  localStorage.setItem('theme', 'dark')
+  classList.remove('light')
+}
+
+const toLight = function() {
+  const classList = document.documentElement.classList
+  classList.add('light')
+  localStorage.setItem('theme', 'light')
+  classList.remove('dark')
+}
+
+  if (localStorage.getItem('theme') === 'dark') {
+    toDark()
+  } else {
+    toLight()
+  }  */
