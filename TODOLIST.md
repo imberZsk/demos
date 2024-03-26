@@ -24,10 +24,12 @@
 ## 工作 TODO
 
 - [ ] 编辑器项目，目前属于停滞不前的状态，完成编辑器 总结
+- [ ] 部署 strapi 要支持图片/视频
 - [ ] 写掘金文章总结 Nextjs 项目 Nextjs-dashboard，Nextjs-notes，Gw-monorepo，Nextjs-blog 正好更新一波 nextjs-docs
-- [ ] b 站和 zustand 的视差效果
 - [ ] Nextjs 域名备案，服务器部署，或者 docs 总结
 - [ ] 总结之前的经验
+- [ ] b 站和 zustand 的视差效果
+- [ ] 刷算法
 - [ ] 面试，缺少源码的深入了解，缺少算法 总结
 - [ ] 写一个前台模版
 - [ ] 写一个后台模版
