@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react'
 
 const DataShow = ({ target }: any) => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState<any>([])
+  const sleep = () => new Promise((r: any) => setTimeout(r, 1000))
 
   useEffect(() => {
     setData(target)
@@ -19,8 +20,22 @@ const DataShow = ({ target }: any) => {
         const threshold = 50
 
         if (documentHeight - (scrollPosition + windowHeight) <= threshold) {
-          // const data2: any = await getData()
-          // setData([...data, ...data2])
+          await sleep()
+          console.log(111)
+          const data2 = [
+            {
+              id: 2,
+              name: 'John Doe',
+              email: 'johndoe@example.com'
+            },
+            {
+              id: 2,
+              name: 'John Doe',
+              email: 'johndoe@example.com'
+            }
+          ]
+
+          setData((data: any) => [...data, ...data2])
           console.log('下拉加载更多')
         }
       }

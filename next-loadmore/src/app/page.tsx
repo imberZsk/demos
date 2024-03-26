@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 
 export default function Home() {
   const [data, setData] = useState<any>([])
+  const [loading, setLoading] = useState(false)
 
   const sleep = () => new Promise((r: any) => setTimeout(r, 1000))
 
@@ -36,13 +37,21 @@ export default function Home() {
         const scrollPosition = window.scrollY // 滚动条滚动的距离
         const threshold = 50
 
-        if (documentHeight - (scrollPosition + windowHeight) <= threshold) {
+        if (
+          documentHeight - (scrollPosition + windowHeight) <= threshold &&
+          !loading
+        ) {
+          console.log('666')
+          setLoading(true)
           const data2: any = await getData()
-          setData([...data, ...data2])
+          setData(() => {
+            return [...data, ...data2]
+          })
+          setLoading(false)
         }
       }
     }
-  }, [data, getData])
+  }, [data, getData, loading])
 
   return (
     <div className="w-[800px] mx-auto">
@@ -56,6 +65,7 @@ export default function Home() {
           </button>
         )
       })}
+      <div>{loading && '加载中..............'}</div>
     </div>
   )
 }
