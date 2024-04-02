@@ -23,7 +23,9 @@
 
 ## 工作 TODO
 
-- [ ] 编辑器项目，目前属于停滞不前的状态，完成编辑器 总结，以开源项目相关开启学习
+- [ ] NextAuth 学习和文章总结
+- [ ] Prisma
+- [ ] 以开源项目相关开启学习
 - [ ] 部署 strapi 要支持图片/视频
 - [ ] 写掘金文章总结 Nextjs 项目 Nextjs-dashboard，Nextjs-notes，Gw-monorepo，Nextjs-blog 正好更新一波 nextjs-docs
 - [ ] Nextjs 域名备案，服务器部署，或者 docs 总结
