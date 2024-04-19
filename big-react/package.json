@@ -1,0 +1,22 @@
+{
+  "name": "big-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.2.5",
+    "rollup": "^4.14.3",
+    "roolup": "^1.0.4",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.0"
+  }
+}
