@@ -2,94 +2,89 @@ import { useEffect } from 'react'
 import * as THREE from 'three'
 import './App.css'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import { GLTFLoader } from 'three/examples/jsm/Addons.js'
 
 function App() {
   useEffect(() => {
-    const scene = new THREE.Scene()
-    const camera = new THREE.PerspectiveCamera()
-    // 75,
-    // window.innerWidth / window.innerHeight,
-    // 0.1,
-    // 1000
+    const loader = new GLTFLoader()
+    loader.load(
+      '/01.glb',
+      (gltf) => {
+        // 获取模型
+        const model = gltf.scene
 
-    camera.position.x = 0
-    camera.position.y = 0
-    camera.position.z = 1
+        // 设置模型的位置和大小
+        model.position.set(0, 0, 0)
+        model.scale.set(1, 1, 1)
 
-    // const color5 = new THREE.Color('skyblue')
+        // 创建场景
+        const scene = new THREE.Scene()
+        scene.background = new THREE.Color('rgb(255,255,255)')
+        scene.add(model)
 
-    // scene.background = color5
+        // 创建相机
+        const camera = new THREE.PerspectiveCamera(
+          75,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          1000
+        )
+        camera.position.z = 5
 
-    const axesHelper = new THREE.AxesHelper(2)
-    scene.add(axesHelper)
+        // 创建渲染器
+        const renderer = new THREE.WebGLRenderer()
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        document.querySelector('#container')?.appendChild(renderer.domElement)
 
-    // 立体纹理
-    // const textureCube = new THREE.CubeTextureLoader()
-    //   .setPath('/textures/')
-    //   // 左右上下前后
-    //   .load([
-    //     'pano_r.jpg',
-    //     'pano_l.jpg',
-    //     'pano_u.jpg',
-    //     'pano_d.jpg',
-    //     'pano_f.jpg',
-    //     'pano_b.jpg'
-    //   ])
+        const gridHelper = new THREE.GridHelper(10, 10)
+        scene.add(gridHelper)
 
-    const materials = []
-    const texturepx = new THREE.TextureLoader().load('/textures/pano_r.jpg')
-    materials.push(new THREE.MeshBasicMaterial({ map: texturepx }))
-    const texturenx = new THREE.TextureLoader().load('/textures/pano_l.jpg')
-    materials.push(new THREE.MeshBasicMaterial({ map: texturenx }))
-    const texturepy = new THREE.TextureLoader().load('/textures/pano_u.jpg')
-    materials.push(new THREE.MeshBasicMaterial({ map: texturepy }))
-    const textureny = new THREE.TextureLoader().load('/textures/pano_d.jpg')
-    materials.push(new THREE.MeshBasicMaterial({ map: textureny }))
-    const texturepz = new THREE.TextureLoader().load('/textures/pano_f.jpg')
-    materials.push(new THREE.MeshBasicMaterial({ map: texturepz }))
-    const texturenz = new THREE.TextureLoader().load('/textures/pano_b.jpg')
-    materials.push(new THREE.MeshBasicMaterial({ map: texturenz }))
-    // scene.background = textureCube
+        const controls = new OrbitControls(camera, renderer.domElement)
+        controls.update()
 
-    const renderer = new THREE.WebGLRenderer()
-    renderer.setSize(window.innerWidth, window.innerHeight)
-    document.getElementById('container')!.appendChild(renderer.domElement)
+        // 渲染
+        const animate = function () {
+          requestAnimationFrame(animate)
+          model.rotation.y += 0.01
+          renderer.render(scene, camera)
+        }
+        animate()
+      },
+      (xhr) => {
+        console.log(`加载中... ${(xhr.loaded / xhr.total) * 100}%`)
+      },
+      (error) => {
+        console.log('加载失败', error)
+      }
+    )
+    // const scene = new THREE.Scene()
+    // const camera = new THREE.PerspectiveCamera()
 
-    const geometry = new THREE.BoxGeometry(10, 10, 10)
-
-    // const sphere = new THREE.SphereGeometry(1)
-
-    // 材质
-    // const material = new THREE.MeshBasicMaterial({
-    //   // color: 0x00ff00
-    //   // color: 'rgb(255,255,255)',
-    //   envMap: textureCube
-    // })
-    // 立方体，网状
-    // const cube = new THREE.Mesh(geometry, material)
-    const cube = new THREE.Mesh(geometry, materials)
-    cube.geometry.scale(1, 1, -1)
-
-    scene.add(cube)
-
+    // camera.position.x = 0
+    // camera.position.y = 0
     // camera.position.z = 1
 
-    const gridHelper = new THREE.GridHelper(10, 10)
-    scene.add(gridHelper)
+    // const axesHelper = new THREE.AxesHelper(2)
+    // scene.add(axesHelper)
 
-    const controls = new OrbitControls(camera, renderer.domElement)
-    controls.update()
+    // const renderer = new THREE.WebGLRenderer()
+    // renderer.setSize(window.innerWidth, window.innerHeight)
+    // document.getElementById('container')!.appendChild(renderer.domElement)
 
-    function animate() {
-      requestAnimationFrame(animate)
+    // const gridHelper = new THREE.GridHelper(10, 10)
+    // scene.add(gridHelper)
 
-      // cube.rotation.x += 0.01
-      // cube.rotation.y += 0.01
+    // const controls = new OrbitControls(camera, renderer.domElement)
+    // controls.update()
 
-      renderer.render(scene, camera)
-    }
+    // GLTFLoader
 
-    animate()
+    // function animate() {
+    //   requestAnimationFrame(animate)
+    //   renderer.render(scene, camera)
+    // }
+
+    // animate()
   }, [])
   return <div id="container"></div>
 }
