@@ -53,3 +53,17 @@
 - [x] 读书《精益创业实战》，多看看，准备准备，可以侃侃而谈，可以让社恐症好点
 
 ## demos 必须要记录下的
+
+## commit
+
+build
+chore
+ci
+docs
+feat
+fix
+perf
+refactor
+revert
+style
+test
