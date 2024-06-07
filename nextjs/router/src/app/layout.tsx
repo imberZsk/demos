@@ -1,23 +1,24 @@
-import Link from 'next/link'
-import './globals.css'
+import { WebVitals } from './component/page'
+import './global.css'
 
-export default function RootLayout({ children, team, analytics }: any) {
+export const metadata = {
+  title: 'NextGram',
+  description:
+    'A sample Next.js app showing dynamic routing with modals as a route.',
+  metadataBase: new URL('https://nextgram.vercel.app')
+}
+
+export default function RootLayout(props: {
+  children: React.ReactNode
+  modal: React.ReactNode
+}) {
   return (
     <html>
-      <body className="p-6">
-        <div className="p-10 mb-6 bg-sky-600 text-white rounded-xl">
-          Parallel Routes Examples
-        </div>
-        <nav className="flex items-center justify-center gap-10 text-blue-600 mb-6">
-          <Link href="/">Home</Link>
-          <Link href="/page-views">Page Views</Link>
-          <Link href="/visitors">Visitors</Link>
-        </nav>
-        <div className="flex gap-6">
-          {team}
-          {analytics}
-        </div>
-        {children}
+      <body>
+        {props.children}
+        {props.modal}
+        <WebVitals />
+        <div id="modal-root" />
       </body>
     </html>
   )
