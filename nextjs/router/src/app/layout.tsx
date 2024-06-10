@@ -1,5 +1,7 @@
-import { WebVitals } from './component/page'
+// import { WebVitals } from './component/page'
 import './global.css'
+import ToastProvider from './toast-provider'
+import { CounterStoreProvider } from '@/providers/counter-store-provider'
 
 export const metadata = {
   title: 'NextGram',
@@ -15,10 +17,14 @@ export default function RootLayout(props: {
   return (
     <html>
       <body>
-        {props.children}
-        {props.modal}
-        <WebVitals />
-        <div id="modal-root" />
+        <CounterStoreProvider>
+          <ToastProvider>
+            {props.children}
+            {props.modal}
+            {/* <WebVitals /> */}
+            <div id="modal-root" />
+          </ToastProvider>
+        </CounterStoreProvider>
       </body>
     </html>
   )
