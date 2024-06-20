@@ -15,12 +15,22 @@
     "coverView": false,
     "postcss": false,
     "minified": false,
-    "enhance": false,
+    "enhance": true,
     "showShadowRootInWxmlPanel": false,
-    "packNpmRelationList": [],
+    "packNpmManually": false,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram/"
+      }
+    ],
     "ignoreUploadUnusedFiles": true,
     "compileHotReLoad": false,
-    "skylineRenderEnable": true
+    "skylineRenderEnable": true,
+    "es6": true,
+    "uglifyFileName": false,
+    "condition": false,
+    "ignoreDevUnusedFiles": true
   },
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
@@ -35,5 +45,12 @@
     "ignore": [],
     "include": []
   },
-  "appid": "wx45e1af648ba3495c"
+  "appid": "wx45e1af648ba3495c",
+  "packNpmManually": true,
+  "packNpmRelationList": [
+    {
+      "packageJsonPath": "./package.json",
+      "miniprogramNpmDistDir": "./miniprogram/"
+    }
+  ]
 }

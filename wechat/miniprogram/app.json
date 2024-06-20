@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/record/index",
+    "pages/index/buy-car/index",
+    "pages/index/mine/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
-  "style": "v2",
   "rendererOptions": {
     "skyline": {
       "defaultDisplayBlock": true,
@@ -18,5 +18,27 @@
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/record/index"
+      },
+      {
+        "pagePath": "pages/index/buy-car/index"
+      },
+      {
+        "pagePath": "pages/index/mine/index"
+      }
+    ]
+  },
+  "resolveAlias": {
+    "@libs/*": "assets/libs/*",
+    "@utils/*": "assets/libs/utils/*",
+    "@api/*": "api/*",
+    "@common/*": "assets/libs/common/*",
+    "@components/*": "components/*",
+    "@interface/*": "interface/*"
+  }
 }

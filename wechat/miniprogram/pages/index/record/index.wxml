@@ -8,7 +8,7 @@
           <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
         </button>
         <view class="nickname-wrapper">
-          <text class="nickname-label">昵称2</text>
+          <text class="nickname-label">登记</text>
           <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
         </view>
       </block>
@@ -21,6 +21,7 @@
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       </block>
     </view>
+    <van-button type="primary">按钮</van-button>
     <view class="usermotto">
       <text class="user-motto">{{motto}}</text>
     </view>
