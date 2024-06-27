@@ -36,3 +36,8 @@
 .LSOverride
 
 project.private.config.json
+
+*.example.ts
+*.example.wxml
+*.example.less
+*.example.json
