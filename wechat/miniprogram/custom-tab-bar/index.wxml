@@ -1,7 +1,0 @@
-<view class="tab-bar {{selected===0?'active':''}}">
-  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-needlogin="{{item.needLogin}}" data-index="{{index}}" bindtap="switchTab">
-    <image class="cover-image" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
-    <view class="cover-view" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}
-    </view>
-  </view>
-</view>
