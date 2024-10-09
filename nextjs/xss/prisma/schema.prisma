@@ -18,8 +18,15 @@ model Comment {
   comment String?
 }
 
+model User {
+  id    Int     @id @default(autoincrement())
+  name  String
+  money Money[]
+}
+
 model Money {
-  id     Int @id @default(autoincrement())
-  uid    Int
+  id     Int   @id @default(autoincrement())
+  uid    Int   @unique // 保留唯一约束
   amount Int
+  user   User? @relation(fields: [uid], references: [id])
 }
