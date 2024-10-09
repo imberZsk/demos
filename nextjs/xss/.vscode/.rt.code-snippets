@@ -1,0 +1,33 @@
+{
+  "react typescript component": {
+    "prefix": "rt",
+    "body": [
+      "const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/} = () => {",
+      "  return (",
+      "    <div>",
+      "      <div></div>",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}"
+    ],
+    "description": "React组件片段"
+  },
+  "next image": {
+    "prefix": "ni",
+    "body": [
+      "<Image src='' alt='' width={} height={} className='h-full w-full object-cover'/>"
+    ],
+    "description": "Image组件片段"
+  },
+  "next api": {
+    "prefix": "api",
+    "body": [
+      "export async function GET() {",
+      "  return Response.json({ data: 'Hello World' })",
+      "}"
+    ],
+    "description": "Route Handler API 片段"
+  }
+}
